@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Button from "../components/Button.component";
-import NavItem from "../components/NavItem.component";
 import FooterItem from "../components/FooterItem.component";
 
 const Footer = () => {
