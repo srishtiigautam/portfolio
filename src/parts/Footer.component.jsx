@@ -1,52 +1,37 @@
 import React, { useState } from "react";
 import Button from "../components/Button.component";
 import NavItem from "../components/NavItem.component";
+import FooterItem from "../components/FooterItem.component";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
   return (
-    <footer className="flex justify-between gap-8 p-6 text-lg">
+    <footer className="flex justify-between p-6 text-lg">
       <div className="flex">
         <h2 className="font-name text-4xl">Srishti Gautam</h2>
       </div>
 
-      <div className="flex flex-col">
-        <h4 className="text-xl font-semibold">Explore</h4>
-        <ul className="mt-4 space-y-2">
-          <li>
-            <NavItem to={"/"} label="About Me" className="p-0" />
-          </li>
-          <li>
-            <NavItem to={"/projects"} label="Projects" className="p-0" />
-          </li>
-        </ul>
-      </div>
+      <FooterItem
+        label="Explore"
+        items={[
+          { path: "/", label: "About Me" },
+          { path: "/projects", label: "Projects" },
+        ]}
+      />
 
-      <div className="flex flex-col">
-        <h4 className="text-xl font-semibold">Design</h4>
-        <ul className="mt-4 space-y-2">
-          <li>
-            <NavItem to={"/uiuxdesign"} label="UI/UX Design" className="p-0" />
-          </li>
-        </ul>
-      </div>
+      <FooterItem
+        label="Design"
+        items={[{ path: "/uiuxdesign", label: "UI/UX Design" }]}
+      />
 
-      <div className="flex flex-col">
-        <h4 className="text-xl font-semibold">Connect</h4>
-        <ul className="mt-4 space-y-2">
-          <li>
-            <NavItem
-              to={"/testimonials"}
-              label="Testimonials"
-              className="p-0"
-            />
-          </li>
-        </ul>
-      </div>
+      <FooterItem
+        label="Contact"
+        items={[{ path: "/testimonials", label: "Testimonials" }]}
+      />
 
       <div className="flex flex-col max-w-md">
         <h4 className="text-xl font-semibold">Stay Updated</h4>
-        <p className="mt-4 text-balance">
+        <p className="text-balance text-md">
           Subscribe to receive latest updates on my projects and design
           insights.
         </p>
