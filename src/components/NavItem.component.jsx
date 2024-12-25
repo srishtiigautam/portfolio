@@ -8,9 +8,9 @@ const NavItem = ({to, label}) => {
       className={({ isActive }) =>
         `${
           isActive
-            ? "text-blue-500 font-semibold underline"
-            : "text-gray-300 hover:text-blue-400"
-        } px-4 py-2 rounded-md`
+            ? "text-pink-600 font-bold"
+            : "text-black hover:text-pink-400"
+        } px-4 py-2`
       }
     >
       {label}

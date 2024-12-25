@@ -4,18 +4,18 @@ import NavItem from "../components/NavItem.component";
 
 const Header = () => {
   return (
-    <header className="bg-slate-500 flex justify-between items-center">
+    <header className="flex justify-between items-center p-6">
       <div>
-        <h1>Srishti Gautam</h1>
+        <h1 className="font-name text-4xl">Srishti Gautam</h1>
       </div>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center gap-5 text-xl">
         <nav>
           <NavItem to={"/"} label="About Me" />
           <NavItem to={"/projects"} label="Projects" />
           <NavItem to={"/uiuxdesign"} label="UI/UX Design" />
           <NavItem to={"/testimonials"} label="Testimonials" />
         </nav>
-        <Button />
+        <Button label="View Projects"/>
       </div>
     </header>
   );
