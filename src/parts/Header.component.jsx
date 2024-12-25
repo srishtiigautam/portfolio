@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Button from "../components/Button.component";
+import NavItem from "../components/NavItem.component";
 
 const Header = () => {
   return (
@@ -10,54 +11,10 @@ const Header = () => {
       </div>
       <div className="flex justify-between items-center">
         <nav>
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `${
-                isActive
-                  ? "text-blue-500 font-semibold underline"
-                  : "text-gray-300 hover:text-blue-400"
-              } px-4 py-2 rounded-md`
-            }
-          >
-            About Me
-          </NavLink>
-          <NavLink
-            to="/projects"
-            className={({ isActive }) =>
-              `${
-                isActive
-                  ? "text-blue-500 font-semibold underline"
-                  : "text-gray-300 hover:text-blue-400"
-              } px-4 py-2 rounded-md`
-            }
-          >
-            Projects
-          </NavLink>
-          <NavLink
-            to="/uiuxdesign"
-            className={({ isActive }) =>
-              `${
-                isActive
-                  ? "text-blue-500 font-semibold underline"
-                  : "text-gray-300 hover:text-blue-400"
-              } px-4 py-2 rounded-md`
-            }
-          >
-            UI/UX Design
-          </NavLink>
-          <NavLink
-            to="/testimonials"
-            className={({ isActive }) =>
-              `${
-                isActive
-                  ? "text-blue-500 font-semibold underline"
-                  : "text-gray-300 hover:text-blue-400"
-              } px-4 py-2 rounded-md`
-            }
-          >
-            Testimonials
-          </NavLink>
+          <NavItem to={"/"} label="About Me" />
+          <NavItem to={"/projects"} label="Projects" />
+          <NavItem to={"/uiuxdesign"} label="UI/UX Design" />
+          <NavItem to={"/testimonials"} label="Testimonials" />
         </nav>
         <Button />
       </div>
