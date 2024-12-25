@@ -1,16 +1,37 @@
-import { Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import Footer from "./components/Footer.component";
-import Header from "./components/Header.component";
+import Layout from "./Layout";
+import AboutMe from "./pages/AboutMe.page";
+import Projects from "./pages/Projects.page";
+import UiUxDesign from "./pages/UiUxDesign.page";
+import Testimonials from "./pages/Testimonials.page";
+
+const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <AboutMe />,
+      },
+      {
+        path: "/projects",
+        element: <Projects />,
+      },
+      {
+        path: "/uiuxdesign",
+        element: <UiUxDesign />,
+      },
+      {
+        path: "/testimonials",
+        element: <Testimonials />,
+      },
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <div>
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
