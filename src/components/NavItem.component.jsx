@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const NavItem = ({to, label}) => {
+const NavItem = ({to, label, className="px-4 py-2"}) => {
   return (
     <NavLink
       to={to}
@@ -10,7 +10,7 @@ const NavItem = ({to, label}) => {
           isActive
             ? "text-pink-600 font-bold"
             : "text-black hover:text-pink-400"
-        } px-4 py-2`
+        } ${className}`
       }
     >
       {label}
