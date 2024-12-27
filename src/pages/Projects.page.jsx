@@ -25,7 +25,7 @@ const projects = [
     name: "RestoreHealth",
     imageUrl: accumitt,
     description:
-      "Desktop application for comprehensive patient data management including information like patient history and immunization records.",
+      "Desktop application for comprehensive patient data management including information like patient history.",
   },
 ];
 
