@@ -21,6 +21,12 @@ const projects = [
     description:
       "This is an AI powered meeting summarizes chrome extension that summarizes you meetings into note format.",
   },
+  {
+    name: "RestoreHealth",
+    imageUrl: accumitt,
+    description:
+      "Desktop application for comprehensive patient data management including information like patient history and immunization records.",
+  },
 ];
 
 const Projects = () => {
@@ -38,7 +44,7 @@ const Projects = () => {
         <p className="max-w-xl mt-5">
           Explore my diverse projects that blend technology and design.
         </p>
-        <div className="max-w-3xl my-5 flex justify-center flex-wrap gap-5">
+        <div className="max-w-6xl my-5 flex justify-center flex-wrap gap-5">
           {projects.map((project) => (
             <ProjectCard
               name={project.name}
