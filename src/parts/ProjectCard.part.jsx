@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button.component";
+import Button from "../components/Button.component";
 
 const ProjectCard = ({ name, imageUrl, description }) => {
   return (

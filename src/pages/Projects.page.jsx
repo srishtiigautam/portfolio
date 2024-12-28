@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectCard from "../components/ProjectCard.component";
+import ProjectCard from "../parts/ProjectCard.part";
 import accumitt from "../assets/image.png";
 
 const projects = [
