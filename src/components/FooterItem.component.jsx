@@ -6,8 +6,8 @@ const FooterItem = ({ label, items }) => {
     <div className="flex flex-col">
       <h4 className="text-xl font-semibold">{label}</h4>
       <ul className="mt-4 space-y-2">
-        {items.map((item) => (
-          <li>
+        {items.map((item, index) => (
+          <li key={index}>
             <NavItem to={item.path} label={item.label} className="p-0" />
           </li>
         ))}

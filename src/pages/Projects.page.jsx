@@ -45,8 +45,9 @@ const Projects = () => {
           Explore my diverse projects that blend technology and design.
         </p>
         <div className="max-w-6xl my-5 flex justify-center flex-wrap gap-5">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <ProjectCard
+              key={index}
               name={project.name}
               imageUrl={project.imageUrl}
               description={project.description}

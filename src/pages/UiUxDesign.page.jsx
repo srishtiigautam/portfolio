@@ -38,8 +38,11 @@ const UiUxDesign = () => {
       </div>
       {/* <div className="flex flex-col justify-center items-center"> */}
       <div className="flex flex-wrap justify-between gap-8">
-        {data.map((item) => (
-          <div className="flex flex-col items-center text-justify mb-10 max-w-sm">
+        {data.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center text-justify mb-10 max-w-sm"
+          >
             {item.icon}
             <h1 className="font-semibold text-xl mt-3">{item.heading}</h1>
             <p className="max-w-3xl text-sm">{item.description}</p>

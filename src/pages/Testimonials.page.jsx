@@ -5,36 +5,41 @@ import image from "../assets/image.png";
 const testimonials = [
   {
     rating: 5,
-    comment: "Srishti's attention to details and creativity transforme our project. Her designs are not only beautiful but also highly functional.",
+    comment:
+      "Srishti's attention to details and creativity transforme our project. Her designs are not only beautiful but also highly functional.",
     avatar: image,
   },
   {
     rating: 5,
-    comment: "Srishti's attention to details and creativity transforme our project. Her designs are not only beautiful but also highly functional.",
+    comment:
+      "Srishti's attention to details and creativity transforme our project. Her designs are not only beautiful but also highly functional.",
     avatar: image,
   },
   {
     rating: 5,
-    comment: "Srishti's attention to details and creativity transforme our project. Her designs are not only beautiful but also highly functional.",
+    comment:
+      "Srishti's attention to details and creativity transforme our project. Her designs are not only beautiful but also highly functional.",
     avatar: image,
   },
   {
     rating: 5,
-    comment: "Srishti's attention to details and creativity transforme our project. Her designs are not only beautiful but also highly functional.",
+    comment:
+      "Srishti's attention to details and creativity transforme our project. Her designs are not only beautiful but also highly functional.",
     avatar: image,
   },
   {
     rating: 5,
-    comment: "Srishti's attention to details and creativity transforme our project. Her designs are not only beautiful but also highly functional.",
+    comment:
+      "Srishti's attention to details and creativity transforme our project. Her designs are not only beautiful but also highly functional.",
     avatar: image,
   },
   {
     rating: 5,
-    comment: "Srishti's attention to details and creativity transforme our project. Her designs are not only beautiful but also highly functional.",
+    comment:
+      "Srishti's attention to details and creativity transforme our project. Her designs are not only beautiful but also highly functional.",
     avatar: image,
   },
-]
-
+];
 
 const Testimonials = () => {
   return (
@@ -54,8 +59,9 @@ const Testimonials = () => {
           design and development.
         </p>
         <div className="max-w-7xl my-5 flex justify-center flex-wrap gap-5">
-          {testimonials.map(testimonial => (
+          {testimonials.map((testimonial, index) => (
             <TestimonialCard
+              key={index}
               rating={testimonial.rating}
               comment={testimonial.comment}
               avatar={testimonial.avatar}
