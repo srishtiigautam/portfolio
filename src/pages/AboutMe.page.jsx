@@ -59,7 +59,7 @@ const AboutMe = () => {
           {/* four child divs */}
           <div className="flex flex-wrap justify-evenly">
             {data.map((item) => (
-              <div className="mb-10 max-w-xs">
+              <div className="mb-10 max-w-xs text-justify">
                 <h1 className="font-semibold text-xl">{item.heading}</h1>
                 <p className="max-w-2xl mt-5 text-sm">{item.description}</p>
               </div>
